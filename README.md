@@ -80,47 +80,39 @@ La aplicación mostrará las 10 ultimas cadenas almacenadas en la base de datos 
 
 ## Generando las imágenes para el despliegue.
 
-Para generar las imágenes de Docker se crearon los archivos `Dockerfile.app` y `Dockerfile.logservice`, ubicados en el directorio `Dockerfiles`. Cada archivo define una imagen basada en la imagen oficial de OpenJDK 17. Estos archivos configuran el directorio de trabajo, establecen variables de entorno para los puertos, copian los archivos de clases y dependencias de la aplicación al contenedor, y especifican el comando para ejecutar la aplicación Java cuando el contenedor esté en funcionamiento. `Dockerfile.app` se encarga de crear la imagen del servidor Fachada, mientras que `Dockerfile.logservice` crea la imagen que será instanciada tres veces según la arquitectura definida.
+Para generar las imágenes de Docker se crearon los archivos `Dockerfile.app` y `Dockerfile.helloservice`, ubicados en el directorio `Dockerfiles`. Cada archivo define una imagen basada en la imagen oficial de OpenJDK 17. Estos archivos configuran el directorio de trabajo, establecen variables de entorno para los puertos y las contraseñas de las llaves, copian los archivos de clases y dependencias de la aplicación al contenedor, y especifican el comando para ejecutar la aplicación Java cuando el contenedor esté en funcionamiento. 
 
-### Servidor Fachada:
-
-Ubiquese sobre el directorio raiz del repositorio, ejecute el siguiente comando para construir la imagen:
-
-``` docker build -f .\Dockerfiles\Dockerfile.app -t approundrobin . ```
-
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/5cdfb3ac-80cf-43e2-ae86-766488189964)
-
-Puede agregar una referencia a su imagen con el nombre del repositorio a donde desea subirla, por ejemplo:
-
-``` docker tag approundrobin aonatecamilo/arep_taller6_approundrobin  ``` 
-
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/f103e3fa-6f58-48c0-a595-4a21e780bcdf)
-
-Empuje la imagen al repositorio en DockerHub
-
-``` docker push aonatecamilo/arep_taller6_approundrobin ``` 
-
- ![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/3db2ea40-f0dd-4d0e-8bf2-cec10d3cfaea)
-
-### LogService
+### Servidor Login:
 
 Ubiquese sobre el directorio raiz del repositorio, ejecute el siguiente comando para construir la imagen:
 
-``` docker build -f .\Dockerfiles\Dockerfile.logservice -t logservice . ```
+``` docker build -f .\Dockerfiles\Dockerfile.app -t applogin . ```
 
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/27b3ba92-4d9c-4d9f-a028-27395129fcaf)
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/ffd62610-3e94-4ec9-a5f5-f47bdf8f393f)
 
 Puede agregar una referencia a su imagen con el nombre del repositorio a donde desea subirla, por ejemplo:
 
-``` docker tag logservice aonatecamilo/arep_taller6_logservice ``` 
+``` docker tag applogin aonatecamilo/arep_taller7_applogin ``` 
 
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/11f0ab32-9451-45e8-a12f-7bf13c15a3d8)
+Suba la imagen al repositorio en DockerHub
+
+``` docker push aonatecamilo/arep_taller7_applogin ``` 
+
+### Hello Server
+
+Ubiquese sobre el directorio raiz del repositorio, ejecute el siguiente comando para construir la imagen:
+
+``` docker build -f .\Dockerfiles\Dockerfile.helloservice -t helloservice . ```
+
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/db018888-8bed-4a83-9eda-8519ceff5fb0)
+
+Puede agregar una referencia a su imagen con el nombre del repositorio a donde desea subirla, por ejemplo:
+
+``` docker tag logservice aonatecamilo/arep_taller7_helloservice ``` 
 
 Empuje la imagen al repositorio en DockerHub
 
-``` docker push aonatecamilo/arep_taller6_logservice ``` 
-
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/cd6a2615-c262-4a06-a0d5-1248021b9a1e)
+``` docker push aonatecamilo/arep_taller7_helloservice ``` 
 
 
 ## Despliegue en AWS
