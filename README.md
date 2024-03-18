@@ -64,10 +64,27 @@ El comando `docker-compose up -d` inicia los servicios definidos en el archivo `
    
 ## Probando la Aplicación.  
 
-Ingrese a la siguiente URL para ingresar a el cliente: `https://localhost:46000/index.html`, es posible que le muestre un mensaje de advertencia por el certificado que se está usando, de clic en `Opciones Avanzadas` y de clic en continuar .
+Ingrese a la siguiente URL para ingresar a el cliente: `https://localhost:46000/index.html` .
 
 ![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/e4fcb7c4-54b1-4935-bd36-f642a7b99960)
 
+ Es posible que le muestre un mensaje de advertencia por el certificado que se está usando, de clic en `Avanzado` y de clic en continuar:
+
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/1e12652d-aeb0-44d4-b1c2-dd16e0b97a6a)
+
+Ingresamos las credenciales; si estas son correctas, nos mostrará un código secreto dinámico, de lo contrario, un mensaje de error:
+
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/d57c860f-ccdc-40e6-80d9-e76571981ac2)
+
+Credenciales incorrectas:
+
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/970ca210-a238-4ae9-a65b-87d7eddaaf13)
+
+Para asegurar el requerimiento de autorización, el servicio `/hello`, que es el encargado de retornar los códigos secretos,  solo puede ser accedido por el servidor Login mediante usuarios funcionales.
+
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/7689495b-c2f7-4354-aa14-0c3b9cf71aca)
+
+Cómo podemos ver, el servicio no reconoce la solicitud .
 
 ## Generando las imágenes para el despliegue.
 
