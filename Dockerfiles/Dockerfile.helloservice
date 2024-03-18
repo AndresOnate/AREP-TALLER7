@@ -1,0 +1,12 @@
+FROM openjdk:17
+
+WORKDIR /usrapp/bin
+
+ENV PORT 35000
+ENV KEY_PASSWORD 123456
+
+COPY /target/classes /usrapp/bin/classes
+COPY /target/dependency /usrapp/bin/dependency
+COPY /certificados /usrapp/bin/certificados
+
+CMD ["java","-cp","./classes:./dependency/*","org.edu.eci.arep.HelloServer"]

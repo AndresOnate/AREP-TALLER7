@@ -22,7 +22,7 @@ public class SecureURLReader {
         try {
 
             // Create a file and a password representation
-            File trustStoreFile = new File("certificados/myTrustStore.p12");
+            File trustStoreFile = new File("certificados/localhost/myTrustStore.p12");
             char[] trustStorePassword = "123456".toCharArray();
 
             // Load the trust store, the default type is "pkcs12", the alternative is "jks"
@@ -48,7 +48,7 @@ public class SecureURLReader {
             SSLContext.setDefault(sslContext);
 
             // We can now read this URL
-            return  readURL("https://localhost:5000/" + service);
+            return  readURL("https://localhost:35001/" + service + "?user=loginUser&passwd=kQtTObGHYxgf4SbS");
 
         } catch (KeyStoreException ex) {
             Logger.getLogger(SecureURLReader.class.getName()).log(Level.SEVERE, null, ex);
@@ -109,4 +109,5 @@ public class SecureURLReader {
         }
         return responseData;
     }
+
 }

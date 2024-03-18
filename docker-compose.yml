@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  login-server:
+    image: aonatecamilo/arep_taller7_applogin
+    container_name: login-server
+    ports:
+      - "46000:46000"
+    networks:
+      - my_network
+
+  hello-server:
+    image: aonatecamilo/arep_taller7_helloservice
+    container_name: hello-server
+    ports:
+      - "35001:35000"
+    networks:
+      - my_network
+
+networks:
+  my_network:

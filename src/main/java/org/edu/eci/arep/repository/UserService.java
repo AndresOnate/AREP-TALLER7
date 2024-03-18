@@ -30,8 +30,6 @@ public class UserService {
 
     public Boolean login(String username, String password){
         Boolean success = false;
-        System.out.println(username);
-        System.out.println(password);
         String encondedPassword = encryptText(password);
         if(users.containsKey(username)){
             System.out.println("Existe el usuario");
