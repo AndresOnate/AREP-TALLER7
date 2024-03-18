@@ -41,11 +41,11 @@ Las siguientes instrucciones le permitirán descargar una copia y ejecutar la ap
 
 2. Ubíquese sobre el directorio donde desea realizar la descarga y ejecute el siguiente comando:
 
-    ``` git clone https://github.com/AndresOnate/AREP-TALLER6.git ```
+    ``` git clone https://github.com/AndresOnate/AREP-TALLER7.git ```
 
 3. Navegue al directorio del proyecto
 
-   ``` cd AREP-TALLER6 ```
+   ``` cd AREP-TALLER7 ```
 
 4. Ejecute el siguiente comando para  iniciar los contenedores definidos en el archivo `docker-compose.yml`:
    
@@ -53,29 +53,20 @@ Las siguientes instrucciones le permitirán descargar una copia y ejecutar la ap
    
    Debería ver algo así en consola:
 
-   ![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/8914eb81-f40d-456b-8c8f-25d76e2512fe)
+   ![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/2d8b9a4e-a12f-445f-8343-985995838c55)
 
    Verifique en la aplicación de escritorio de Docker que los contenedores se esté ejecutando
 
-   ![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/e784076f-d88d-4124-9536-e785c307be1b)
+   ![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/ce7a3a96-f326-4943-92aa-bbe496f2f7a3)
 
-   
+
 El comando `docker-compose up -d` inicia los servicios definidos en el archivo `docker-compose.yml`.
    
 ## Probando la Aplicación.  
 
-Ingrese a la siguiente URL para ingresar a el cliente: `http://localhost:38000/index.html`.
+Ingrese a la siguiente URL para ingresar a el cliente: `https://localhost:46000/index.html`, es posible que le muestre un mensaje de advertencia por el certificado que se está usando, de clic en `Opciones Avanzadas` y de clic en continuar .
 
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/d6bb1df5-fe2d-4adb-9ea5-69260f5a676f)
-
-Ingrese el valor del mensaje y de clic en el botón `Send`:
-
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/ed754812-8647-4cea-81de-0a5954a7b5f5)
-
-
-La aplicación mostrará las 10 ultimas cadenas almacenadas en la base de datos y la fecha en que fueron almacenadas.
-
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/39eb7e7d-be76-4262-ba28-7ba99a79e99b)
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/e4fcb7c4-54b1-4935-bd36-f642a7b99960)
 
 
 ## Generando las imágenes para el despliegue.
