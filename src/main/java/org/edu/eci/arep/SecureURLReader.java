@@ -48,7 +48,7 @@ public class SecureURLReader {
             SSLContext.setDefault(sslContext);
 
             // We can now read this URL
-            return  readURL("https://localhost:35001/" + service + "?user=loginUser&passwd=kQtTObGHYxgf4SbS");
+            return  readURL("https://host.docker.internal:35001/" + service + "?user=loginUser&passwd=kQtTObGHYxgf4SbS");
 
         } catch (KeyStoreException ex) {
             Logger.getLogger(SecureURLReader.class.getName()).log(Level.SEVERE, null, ex);
