@@ -108,7 +108,7 @@ Ubiquese sobre el directorio raiz del repositorio, ejecute el siguiente comando 
 
 Puede agregar una referencia a su imagen con el nombre del repositorio a donde desea subirla, por ejemplo:
 
-``` docker tag logservice aonatecamilo/arep_taller7_helloservice ``` 
+``` docker tag helloservice aonatecamilo/arep_taller7_helloservice ``` 
 
 Empuje la imagen al repositorio en DockerHub
 
