@@ -2,6 +2,8 @@
 
 En este taller construimos una aplicación web segura con la arquitectura  presentada en  la siguiente imagen, que garantiza la autenticación, autorización e integridad de usuarios y servicios. 
 
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/769ff6c6-1f30-40fe-9926-e8e50c41ad41)
+
 
 ## Requerimientos de Seguridad
 - Acceso seguro desde el navegador: La aplicación web garantiza la autenticación, autorización e integridad de los usuarios que acceden a través del navegador.
