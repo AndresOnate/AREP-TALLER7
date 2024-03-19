@@ -129,31 +129,29 @@ Se creó una instancia de EC2 en AWS con las siguientes características.
 
 ![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/8edad574-fb65-4bc9-bca5-751189a6f1b2)
 
-Se instala git con el siguiente comando: 
+Se ejecutan los siguientes comandos para crear imagenes de los contenedores:
 
-``` sudo yum install git ``` 
+```docker run -d -p 46000:46000 --name loginserver aonatecamilo/arep_taller7_apploginvm ```
 
-Se instala los componentes necesarios para ejecutar `docker-compose` con los siguientes comandos: 
+``` docker run -d -p 35001:35000 --name helloserver aonatecamilo/arep_taller7_helloservicevm ```
 
-``` sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose ```
-
-``` sudo chmod +x /usr/local/bin/docker-compose```
-
-``` docker-compose version ```
-
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/0a56a98b-fbb8-49bf-8ca3-f6d1c5d9194f)
-
-En el siguiente video se muestran los despliegues funcionando en la máquina virtual:  https://youtu.be/l76ZwRivvy4?si=XUhw48hv1A8jfqxr
+En el siguiente video se muestran los despliegues funcionando en la máquina virtual: 
 
 Imágenes del despliegue:
 
 Servidor de la aplicación:
 
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/641b2ec2-3a5d-4e8a-bd7f-6da917eb1a98)
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/fd8b2881-b28e-4363-9922-83af7804f5df)
+
+Ejecución:
+
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/f98fb772-ab83-4d6b-863a-fa0405e19ea7)
+
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/1b5e3c23-f93a-4e22-b08f-2b203ab393c1)
 
 Instancias de los contenedores:
 
-![image](https://github.com/AndresOnate/AREP-TALLER6/assets/63562181/d6e2737f-ca9e-4524-ba0c-6c3db316e207)
+![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/aff6d12d-625f-4a0a-b9c2-257e6318311a)
 
 
 ## Construido Con. 
