@@ -1,7 +1,5 @@
 # APLICACIÓN DISTRIBUIDA SEGURA EN TODOS SUS FRENTES
 
-# TALLER DE TRABAJO INDIVIDUAL EN PATRONES ARQUITECTURALES
-
 En este taller construimos una aplicación web segura con la arquitectura  presentada en  la siguiente imagen, que garantiza la autenticación, autorización e integridad de usuarios y servicios. 
 
 
