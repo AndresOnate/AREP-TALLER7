@@ -16,7 +16,7 @@ public class LoginServer {
         UserService userService = new UserService();
 
         staticFiles.location("/public");
-        secure("certificados/localhost/loginkeypair.p12", getKeyPassword(), null, null);
+        secure("certificados/ec2/loginkeypair.p12", getKeyPassword(), null, null);
 
         get("/loginservice", (req, res) -> {
             Boolean successLogin =  userService.login(req.queryParams("user"), req.queryParams("passwd"));

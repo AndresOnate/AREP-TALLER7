@@ -20,7 +20,7 @@ public class HelloServer {
 
         UserService userService = new UserService();
 
-        secure("certificados/localhost/ecikeystore.p12", getKeyPassword(), null, null);
+        secure("certificados/ec2/ecikeystore.p12", getKeyPassword(), null, null);
         get("/hello", (req, res) -> {
             String usuario = req.queryParams("user");
             String clave = req.queryParams("passwd");
