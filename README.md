@@ -26,7 +26,7 @@ Se implementan mecanismos para garantizar la integridad de los usuarios y los da
 
 ## Extensión de la aplicación.
 
-
+Para escalar la arquitectura de seguridad e incorporar nuevos servicios, se seguiría un proceso similar al utilizado para los servicios existentes. Se generaría un nuevo certificado utilizando la herramienta keytool, asegurando que cada servicio tenga su propio par de claves único. Posteriormente, se configurarían los nuevos servicios para que utilicen estos certificados en sus comunicaciones seguras. Además, se garantizaría que la autenticación y autorización se apliquen de manera adecuada para los nuevos servicios, utilizando certificados para validar la identidad de los clientes y garantizar la integridad de los datos transmitidos. 
 
 ## Guía de Inicio
 
