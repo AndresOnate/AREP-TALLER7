@@ -4,13 +4,6 @@ En este taller construimos una aplicación web segura con la arquitectura  prese
 
 ![image](https://github.com/AndresOnate/AREP-TALLER7/assets/63562181/769ff6c6-1f30-40fe-9926-e8e50c41ad41)
 
-
-## Requerimientos de Seguridad
-- Acceso seguro desde el navegador: La aplicación web garantiza la autenticación, autorización e integridad de los usuarios que acceden a través del navegador.
-- Comunicación segura entre computadoras: La comunicación entre al menos dos computadoras se realiza de manera segura, garantizando autenticación, autorización e integridad entre los servicios. Ningún servicio puede ser invocado por un cliente no autorizado.
-- Escalabilidad: La arquitectura de seguridad debe ser escalable para incorporar nuevos servicios de manera eficiente y sin comprometer la seguridad existente.
-
-
 ## Diseño de la aplicación
 
 La aplicación está diseñada para cumplir con los requisitos especificados en el enunciado del taller y proporcionar una experiencia de usuario fluida y satisfactoria. A continuación, se describen los principales componentes y características de la aplicación:
@@ -19,7 +12,20 @@ La aplicación está diseñada para cumplir con los requisitos especificados en 
 - La clase `SecureURLReader` proporciona funcionalidades para realizar solicitudes seguras a un servicio web a través de HTTPS. El método invokeService(String service) establece una conexión segura con el servicio web especificado. Primero, carga un almacén de confianza con los certificados necesarios y configura un contexto SSL. Luego, invoca readURL() para realizar la solicitud al servicio seguro y devuelve la respuesta como una cadena de texto. El método readURL(String sitetoread) realiza la solicitud HTTP GET al servicio web seguro utilizando la URL proporcionada. Después de establecer la conexión, obtiene los campos del encabezado de la respuesta y lee el contenido del mensaje del servidor, devolviéndolo como una cadena de texto.
 - La clase `HelloServer` define un servidor web Java utilizando el framework Spark. Define una ruta `/hello` que maneja solicitudes GET y valida las credenciales de servicio proporcionadas, solo las solicitudes del servidor principal tendran una respuesta. Si las credenciales son correctas, genera un código secreto único y lo devuelve como respuesta; de lo contrario, responde con un mensaje de error y un código de estado HTTP 401. A través del mapa serviceUsers, la clase gestiona las cuentas de servicio y contraseñas asociadas para la autenticación. Además, el método getPort() determina el puerto de escucha del servidor, mientras que getPassword() obtiene la contraseña del servicio desde la variable de entorno SERVICE_PASSWD.
 
-## Arquitectura
+## Seguridad de la Aplicación
+
+La aplicación garantiza un acceso seguro desde el navegador al proporcionar autenticación, autorización e integridad de usuarios. Esto se logra mediante la implementación de diversas medidas de seguridad en las capas de autenticación y comunicación.
+
+### Autenticación y Autorización
+
+Se implementa un sistema de autenticación robusto que requiere que los usuarios inicien sesión con credenciales válidas antes de acceder a los servicios protegidos. Además, se establecen cuentas de servicio para la comunicación entre servidores, lo que garantiza que solo tengan acceso a las funciones y datos para los que están autorizados.
+
+### Integridad de Usuarios
+
+Se implementan mecanismos para garantizar la integridad de los usuarios y los datos que manejan. Esto incluye el uso de conexiones seguras mediante protocolos como HTTPS haciendo uso de certificados SSL.
+
+## Extensión de la aplicación.
+
 
 
 ## Guía de Inicio
