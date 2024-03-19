@@ -135,7 +135,7 @@ Se ejecutan los siguientes comandos para crear imagenes de los contenedores:
 
 ``` docker run -d -p 35001:35000 --name helloserver aonatecamilo/arep_taller7_helloservicevm ```
 
-En el siguiente video se muestran los despliegues funcionando en la máquina virtual: 
+En el siguiente video se muestran los despliegues funcionando en la máquina virtual:  https://youtu.be/HSLhpJOz6Nc
 
 Imágenes del despliegue:
 
